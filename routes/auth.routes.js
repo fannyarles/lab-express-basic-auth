@@ -19,8 +19,9 @@ router.post('/signup', fileUploader.single('avatar'), (req, res) => {
                 password: hash,
                 avatarUrl: req.file.path
             })
+            .then(user => res.redirect(`/auth/profile/${user.username}`))
+            .catch(err => console.log(err))
         })
-        .then(() => res.redirect('/auth/profile'))
         .catch(err => console.log(err));
 
 

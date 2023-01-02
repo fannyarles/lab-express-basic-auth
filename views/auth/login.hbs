@@ -1,0 +1,10 @@
+<h1>Login page</h1>
+{{#if errorMessage}}
+{{errorMessage}}
+{{/if}}
+
+<form action="/auth/login" method="post">
+    <input type="text" name="username" id="username" placeholder="Enter you username" required><br>
+    <input type="password" name="password" id="password" placeholder="Enter your password" required><br>
+    <input type="submit" value="Login">
+</form>

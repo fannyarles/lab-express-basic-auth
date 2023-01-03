@@ -1,3 +1,7 @@
 <h1>Profile page</h1>
+{{#if user}}
 <p>Username: <b>{{ user.username }}</b></p>
 <img src="{{ user.avatarUrl }}" />
+{{else}}
+<p>No user logged in.</p>
+{{/if}}

@@ -6,3 +6,19 @@ body {
 a {
   color: #00B7FF;
 }
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+li + li::before {
+  content: " | ";
+}
+
+nav li form {
+  display: inline-block;
+}
